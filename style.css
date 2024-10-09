@@ -1,0 +1,196 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhISEBIVFRUVFRYVFRUVFRUPFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQFy0dHR0tLSstLS0tLS0tLS0tKy0tKy0tLS0tKy0tLS0rLS0tLS03LS0tLS0tLS0tLS0tLS0tK//AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAADBAIFAAEGBwj/xAA6EAABBAECBAUBBgYBAwUAAAABAAIDESEEEgUxQVEGImFxgRORobHB0 fAHFDJCUuHxI2LCFSRDcrL/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAhEQEBAQEAAgICAwEAAAAAAAAAARECITEDEhNBMlFhBP/aAAwDAQACEQMRAD8A81DERjFIBHaFlVNNYiUsCmEwi1qmVsLC1EATgoiMpgNRGMQpKNtBQe2yjuGFBnNGhARKLnKz0ul33Z2taNz3dh+Z9FW6jVwOeWRh7awPqVbj1oDkjLZpbAHhZHHlGaxEa1RFVOKNSczKI3kpMZaGdLuaEBzc4TrmIexM5AmBT22sLQpMcqMpNEgfTT8iH9O8AX7ZRDsDijTbYcIUfNNuNBBEJmUgUmZRahHHZQaAcsLbCei0qg7T5pQFTKEJj05qIaSjmqiGa5ScUuxEaFNoQlagmNMEKD1UMHYtKZKxPCFBRWFQ2qYCRCI7G2hsCbgTMMxKTWpg0otbZSAL2LbAj7FJkSKYVKTGIzo0zw7Sl72NH9zgP1Qa+4Fwu42l4/uEhHcAEMB+bP2JPxn4cbNGZYxtkYLxiwF1PEGiNga30HwBQQtOcDcNp7FbT+mebNeW6GXcPNz6/qmwxR43php9W5rR5DR9g7kR7G003IWPcyr5uxpjUzDHhLsGU219KCsClYlpGp1uSskiRqpFUVJqJJHlQRek0tLLSsuH6mZhEOnaPqPAMjzR2s/x9EhBpi99dBbnHsBldD4MiJbNKebnbQT2A/2tuPWptUerdUrxVU7kFIOtE4vFU8oOPNf2gFDAwovhcDcEzoo7QSExoylb4NYfTACrJX5KsZJPKqaR2Sp5oLzFJp1yAWq01qKG1tzEbT4ClIzCgFLQHojkGQKobW1bUd6xNJoIrWqLQjxtTNm1b3o5agOblATa9HYEFrU1CEqaRU4n9FINWi3KnfIGNGgr3wdDeoDqsMa533UPvK53cus/h625J8//AB/+QVT2L6Q8U67AokUt8B4j9RtH2zZHyg+NIaBwkfBundiRh9HNdi/ZVN1pJLwt+P8AAROBeHAEAjPPofRck7h7obZKcs69C3oR++i9C4vxqKBtyOA6D3zX4Lz7W62XXvwzYz/KvMR0+OS1+uzK5vtlHiiDmgj91hLTgjoux4D4ZDYmMOe95siz+aJxbhmPKzFEOBqjdG+4P9Sn8UP8jkNI9MzcuS7Dw54dD2iQxgbs+wIGPvKb1/B42PpzcEcvu/JTfg/1X5p/Tzd7EuyEudtaLJXqTOBad4aTGaF4XJ+LNCdLMx8TNsRGTzIypnxefJXpV6/QGNn8vFmR5G9w9rr2C6Xg3D/oRRx9QM+55pzgH0XsBYdxOS41f75qxl043Ba9ePRcvOfEkVamX3H/AOQq5W/iUf8AuZv/ALfkFXMjXP1fLWekGNTEbcLeykXbjCi9/oFZnGki4pvVA1lLUnyYVIZCY2qbY1aQYmLJm4TbGqMwFKAqnNUHRpqQKJT0qU+isTe1Yl9k6kI0SPmtNKIwZWix6UAy1shSajTxNsSIGqUZwp9Er5GIFy2CouCIxuFM9kHS9A/h5pWCGSYt8xOz45lcRsFL0HwC8fy729nk/aB+i159l16V/jXS74HkcwQQVyXhjiwja5shq7p3al2Pivj0LAYnEbnA0Oh9LXCcE0hnkDgPIDyIu/Q+qvnnaPvJzhh+ik1Mv1JvM0Ybmmn3C7XgPCAAABVY6YHZA0/CnCnU0Dtzodwun4LG3FZpa7Iw80/ptEGgABa1GjBzXdPFwUHOS0yXCnFu5vT92ta5hLwUy0Vax2UglFphV0P1VD4q4O2WNwcOnl657romSUh6mnNKYeBQzycP1G2yWk5A79l6TwnWGQtc7qLVP464YH+djRbfn7h+aV8G68E7JDkihfM9LU9RXN8KrjHmmlIz53H70GFqt/EXCvoPFGw7Nn94VUCuHu2dZWkvhOZ2FtpwgyklaBICjFQLVlKtapzuvC1GxbQVGltrsqe3moRtynaB9qDqCm40vqW5UaSvlQ2lGmYgBVQMsQd6xZowZgTDFFlLa6GwrVJwUWBSOUsOCxFED0s19KW9JVhxjbUpG0EGOTAU5nWERNibXLpeGPMEMku+rb6c+lrm9LGSRQJ9l1ei0G+P6Z3Z6Po16eo9FrzGXXh5zrxJI4yzXk8ufz++y6/wTxAF2yht7ggfJB5FW8vgxspAd/SO3lIPJLR+DpNK8SteCxppwANlpPUXS3mYxrrdQ0khjACDz7+9hWfD+Hlg/wCEfQxtawPPYc8LnONeMNjiyFjpCOewF9fYCoN1IjPVQeQvONV/EZzCGT6eaPcQA4sJGSBS6rg3ExO0ObfyCK+CmFySpNWRsUntTSGXWgutV3G+KtgaXPdX5ri2/wAT4muIDJXUckMdtHylaqRdcVgIJBAo+i858RaeTTzCWLlzsfeF6vwnjEOui3MIv7weS888dy7JfpczjH5p7oxrVeIP5pkd42jIJ691BrMKq0EWw2W8/wAfU9VfRw4XF/085dXyWazK1IMI9ZKBIuWdtITLLKIxmFoYJRWlaS0AvagtCbc1RbFhXqpC7HkFYTaNNHhKBETY1M1JvjTjkJ4tP7DCu1aTX0FinSbjW3FRatgrdrYI12Fm5DcsBQUSa9FtK7T0RmNKSqYa5NROvCWa1M6CAvcALyemUp7F9Ov8JcFcTudde+F2DeHgEH/an4V4d9OIWScdf9qymFLonhzW6XZHXIIuyxRUQVO1SQZ9M18RiJLR/wBp2mvQhVzNEyMbWNAA6AK2elpTfRBK2fh7ZQWvaHA8wchO8N4U2Mna2rq661gJ7SaU1ZCfihrmq0sLBijK1NOIQTIDyCCUnE+EtlLS4cuSRHCmMsBjQDZIoZvmuglylNQEWnHNDgP05DLpqYXf1t/sef8AKhydirHP7KU414VdqdWZXGmNY0DlZdm/hdfE1G+nhTqnH63w40RgXW303FVWv07WtNHI78/nsvQ5ILC4vxhpHNYSKrt/pY/PzvCufblWvyouCXgJtGfdLz+eXTOCrzkqUTkrI7KlEVtIm84eWw7CC1yhI9MCTOwlhGs3piEYTLqENRhKiTKb4kqlzsp4Uq2ZKKWKvCxZYWNNlR4jaUjiPRWGl05pdWtW5UFrk0+PomYOGFLYcgGnZaZESf0+g29EV8GLpLQrqTfBmgTM3XV9BaGY1c+FdFulskGq8uU+fNT34j1fQACNtdkKco+nHkFCvRI6lb1zRoPW9+UqZFL63ZGg8ZgBZU4XtdkZXJ+LeImPTve3Ja0mrpP+B9X9bTRSdXN83uMFVLpWOthzlZK/osa6gkeJSODDt506vsKCQ4nq9kZd0HXp9q5aLxxE00Xg30o/OV5V4/8AHuomc6AeSFji0MHN1f3OPW1TabUuLA+/LtJKveZ7E5te+cG8Twah+xrgH1e3+kn2B5q1lYLpfMnBONvbPE9hILXgt6dcj2pfTcb7AKXVl9FJZ7S2ABQa9AnlIcFoyLPfK8NblXcc0IliIIHymd6ySYAGyq9k8sPD9riD37Uh6llBX3GHgyEg/dSodc5cNkld0uxSS81OIIrorKl9Gk/BdRgKE7KxywNKMTgTnUixTVSWnaUJzkZo6jeuku1UuKc1D8JEHKvPDLBwViha2svrS11Wj4X6Kzi0AHRH0jqCnLqhyTdKlniAkr1V1pWBUUji+Sm91aMDmp2BZkBC2hAjeUSMORqcDl0wRuAwuEoOQ0cyKF+hRXNxlR4Q8mZoBGDZB5Facey79PUdIfKPZKasJnSu8oQdWFs5VTMVBrkeYfsJGR2cWgynHdO6SGVrcksdXLnRrmtfwpnd/LfTkDQ9pyBQxQyAMV7YT7Hg4530/U9Vwn81/wCla5pa0fTkJprAS7a4i7e68DzeUdACSOtcl09mkf0SeseOvKqPscH8UvpeMxTDdE9rjQJo5aCLG4cxgjCT4lqQQc8hZz+8pljxPxPwuGDUv/mI9wLi5j87Xg8tw/yH32qLUahheduIyNvx6rvvFDZpbGGtAslzmgd8E8uYXIabgDi5xaWvAOdrmyVQs2L91HXW3235lkzC3h/gol1DG6YuJ3A2TQY3GT6819EaaTC8+8EsDGbWta3uAMmup/D4Xcad/wC+SJ2z75ymdaLLT8oZKyR3UqAen+0jBB1v9B9lsPQeIPIYdotPfAcRrSdx5/KRnYnp2EvcSlZWFcLsiEMAW5YMLcbzdJwQkoO1VM0NppnDMK3ghCbdGKTTrmZuF4SWo4XjC6jUEAZVY6YXzR6PdcvqOHkDkkZdCey7CfaQEm+EFP7Jxy4gK2rp2lCxV9kfQ8dQ4BKSak5VlLpMJTUaehjso10DeGog63HnZVzstxHQFUfh6F27C63TaZXbvhnmAxaVMt0/onYo1KXCnC1XatopV2ji2vBBI7/7VnO2zSp9ZLmh7n4VW4cmvTuFy2wZvHspahVXhjVh0Y9udED7TkqxmkW89OWzKR1Hoq/UE9/fCdmkv/lIzVXM/qjTDjf0tLca4UNTEW8ngHa717H05Y9lsGiax3IpNwahpw02RzROhY8agmm0MhDHFrmlxmDyfMQbLSQLOCfl15wu5ZM7U6KOVr3W/cTkinWbFnmG5CsPFvhlupb9RmJWj2DwMgE9D2KrGzti0UMMJDtocJHc/wDqE7nAUehdR9lpLK1+DjrrrI8+45pnguskixzzycCh6SN0b7bYPcEgrrddpPqQnFEA+qHPw0Eg8rAP3IvxuqfF50lF4k1EeqbCxrXNeGbMc9w7ju6xlev6Rhaxu8guoWRyus16LivC/CWGaOSTnC1wYK5knB+AXfb6LsdU6xgkfvssrJzXN83PU6ypmXcUZrkg3nztHDqROmNhgv8ARB1UlNyh70nr5rwi9eBJtVsrgXWg6iAFAmYQbQ3zkhc1dMTigAKsGx4VXBKVaRElEFQLqUvqmkT6K1JFhGlil4lP2XOTag3zXT6zTWq2fhgNo07FR/PnkjxapJarRlpW4m0QrklRbYsdyxAa5Yr+kR9lrqtdQVdLxEEFG1mmNKl1EBAWMkrp10/AtQ1dEzWjuvOdFqi0LoNBKSMlPE2urHEB3WO11lULSbr7fZS0Um5xPbCcibi3n1ADbKoZnkm++U7qHgmh0QJmpXyqeHQeDdSA/aevK11OrfS4jw4P+u0D3Xa8QGFtx6YfJ/JXSOsoMkg7/qsLc5tRcK5c/W0VMJTyc6HLNc/lb01huMEmz3uluVvMbRZ55/0q6BzmudJI8VdAcqxnmfZZ7laybF9oJd2Hjbdjn9i5XT8Pa102lb/VG90h6WJDjHemg+u4FdBotWwkUf6cX/3AcvzUPEPBY9YGuDzDqGZjmZzrs8f3D0W3HUP4+78ff2UboQBtHyfuWo9JZb2AH3hbj0euYC2eKKUjk+GQN3drY+qPymNPo9XJQLWadtZcXCWT4Y3yj33fC1/Ny7/y8ZurLhOmLSXntQ/OvspOuBIz9y0zTiNrWCyGigSbcepJPcrb5RXqufrra4fl7vfX2BZub/dY9qWGa+6hJ8obXevylGVMNd3Q3tvmtBDlejqnwX1jVTVkhXLmWkJNNRWVaS4lptPnKtY6pKsGAUA6ijSUVfJ2aalXajiIHNA1eqNFUk8hJTsTKspuIA4CINSKpUTsKDZzeFNaxaaiMOCqJ46Kb+vjKTnltVwnqQxHp7AK2oxaoUFi21z4ttVyVFxF3l+VeCVp5qq4pCDVd1zy+XT+iui0hcLCvuH6cisKXBYfKMK/haOyrdTZisnbTT3K3w2Cm+tprUlpJ9EWAhoCd8FEBoqQNRFSsDKOiBI7cQEhrXBNK4SNcO/Pmu41ceB+KU8PcPAbuIVvqm4wunjnI5++trn5RXNBP76prUMPRLOaao8/YJUQrrpDgMbudfIVj3wq/W6YXcjsitrAMXzz1P2q5BArzD8EnM404t29CMg179lj015Ur9OSDRfYNGyGNxR8jR1/RWOplcQDbgW047WnI7cueOXutRaWRwG/ZtcQ7bX+VC3XZNe3VQlhJaYyQDY2cgW9eddOSz8xr7XEIBaLI+LGPYrURa0kA0e5yD6+yTaHBw3kGhVi6rnkDkmpZhQJ9rrl9mVWpvKGsnPPB9rP2EJR0h5/fRtTJDfMGgj5QJXOJuhR7c/wRpYmJxyu1oR2cD3UCBfLPqPwVjpmADK0npnfYeysJWcJyaTKVe+ys7WkSiYlta2sp2PkldbkFKjSen1HRD1DOqVgcdytWtFZSircUepiN2ECGLnautSARhV7YjeE7S5KzwgiqSIgrJV+yMIkmlDmnHRTZqtxzJbuNBC/lrKtdJp9rytah4aflXyjqqz+TKxWBeFtasWxD2SvFIiKWLFjPbp/S34ZqNrB7Keq4lX9K0sQSvi1bnG/lWEOoJWLEujhxrlccC0IkeN1EBYsVfD56R8tzl2geGgAdFtslg2sWLucav1gHMKqmaTg8lixZ9RfIMnlGMgfCUDQ7mXVRwKz0JKxYsO2/Db9SBRF5DWgXWeQJ7YQZGBzbJId+vS/hbWLG1tInpGVkk2RZ6h1dfQ9EcPFHrf4j0WliZUk/VDzb9o9gftwhsI5j36/gsWJ8o6T07dzwr5+nBGVixdfxyY5ur5IzxUq/dlYsWHcyteKbYQlp3LSxZ1pyRkYAUSOYVS0sSP9ttYpCBYsTievZLXu2iwkIeL5orFiFz0r5Nf5sd0GeYuN+qxYrkRTDOSxYsVJf//Z');
+  --color-text-main: #000000;
+  --color-text-header: #2800FF;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #D0FFF1;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: var(--color-text-header);
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 0;
+}
+
+/* Very light scaling for our illustration */
+.illustration {
+  max-width: 100%;
+  max-height: var(--image-max-width);
+  margin-top: var(--image-margin);
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+
+/* Button - Add it from the README instructions */
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+}
+
+/* Subheading */
+h2 {
+  color: var(--color-text-header);
+}
+
+/* Interactive image */
+.illustration:active {
+  transform: translateY(5px);
+}
+
+/* Button dip
+- Toggling this class on and off will move it down and up again
+- The button transition property above determines the speed of the translate (500ms)
+*/
+.dipped {
+  transform: translateY(5px);
+}
+
+/* Links that open files in the editor */
+.fileopener {
+  cursor:pointer;
+  font-weight:bold;
+  border-bottom:3px solid var(--color-primary);
+  color: var(--color-secondary);
+}
+.fileopener:hover {
+  border-bottom:3px solid var(--color-secondary);
+}
